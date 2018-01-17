@@ -1,5 +1,0 @@
-DELETE FROM user_details
- WHERE id NOT IN (SELECT * 
-                    FROM (SELECT MAX(n.id)
-                            FROM user_details n
-                        GROUP BY n.email) x)
