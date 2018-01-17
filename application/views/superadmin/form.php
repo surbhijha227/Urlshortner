@@ -24,8 +24,8 @@
                 </div>
                 <div class="form-actions">
                   <input type="submit" name="submit" id="submit" value="ShortURL" />
-				   <button type="button" class="btn-default canclebtn">Reset</button> 
-				 </div>
+		  <button type="button" class="btn-default canclebtn">Reset</button> 
+	      </div>
               </form>
               <div class="form-actions">
                 <label class="control-label">Short URL
@@ -55,7 +55,7 @@
                 </div>
                 <div class="form-actions">
                   <input type="submit" name="submit" id="submit" value="Longurl" />
-				  <button type="button" class="btn-default canclebtnshort">Reset</button> 
+		  <button type="button" class="btn-default canclebtnshort">Reset</button> 
                 </div>
               </form>
               <div class="form-actions">
@@ -92,9 +92,9 @@
                   </th>
                   <th>Short URL
                   </th>
-				  <th>Count Long URL Search
+		  <th>Count Long URL Search
                   </th>
-				  <th>Count Short URL Search
+		  <th>Count Short URL Search
                   </th>
                   <th>Create Date
                   </th>
@@ -102,9 +102,9 @@
               </thead>
               <tbody>
                 <?php 
-				$i =1;
-				if(!empty($record)){
-				 foreach ($record as $row){?>
+		$i =1;
+		if(!empty($record)){
+		 foreach ($record as $row){?>
                 <tr class="odd gradeX tr-remove">
                   <td>
                     <?php echo $i++;?>
@@ -115,10 +115,10 @@
                   <td class="center">
                     <?php echo $row->short_url;?>
                   </td>
-				  <td class="center">
+		  <td class="center">
                     <?php echo $row->long_url_hit_count;?>
                   </td>
-				  <td class="center">
+		  <td class="center">
                     <?php echo $row->short_url_hit_count;?>
                   </td>
                   <td class="center">
@@ -196,26 +196,16 @@
 			}
 		});
     }
-	function resettext()
-	{
-		$.ajax({
-		  type: 'GET',
-		  url: '<?php echo base_url();?>superadmin/getAllDataAjax',
-		  success: function(result)
-			{
-			  $("#myTable").append(result);
-			}
-		});
-	}
-	
-	$('.canclebtn,.close').click(function(){
+
+	//to reset the form
+      $('.canclebtn,.close').click(function(){
       $('#longurl_form_id')[0].reset();
-	  $('#print_short_url').val('');
+      $('#print_short_url').val('');
     });
 	
-  $('.canclebtnshort,.close').click(function(){
+      $('.canclebtnshort,.close').click(function(){
       $('#shorturl_form_id')[0].reset();
-	  $('#print_long_url').val('');
+      $('#print_long_url').val('');
   });
 	
 </script>
