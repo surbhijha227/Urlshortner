@@ -201,11 +201,13 @@
       $('.canclebtn,.close').click(function(){
       $('#longurl_form_id')[0].reset();
       $('#print_short_url').val('');
+      window.location.reload();
     });
 	
       $('.canclebtnshort,.close').click(function(){
       $('#shorturl_form_id')[0].reset();
       $('#print_long_url').val('');
+      window.location.reload();
   });
 	
 </script>
