@@ -14,6 +14,5 @@ This Provides the option to Shorten the URL
 # Built With
 1.codeigniter(3.1.5) - framework(MVC pattern)
 2.MYSQL - Database
-3.https://www.googleapis.com/urlshortener/v1/url - api used
-4.curl function used
+3.algorithm to create short url.
 
